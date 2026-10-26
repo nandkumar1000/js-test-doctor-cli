@@ -1,0 +1,42 @@
+{
+  "name": "js-test-doctor-cli",
+  "version": "0.1.0",
+  "description": "A local, read-only diagnostic CLI for common Jest and Vitest setup problems.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nandkumar1000/js-test-doctor-cli.git"
+  },
+  "homepage": "https://github.com/nandkumar1000/js-test-doctor-cli#readme",
+  "bugs": {
+    "url": "https://github.com/nandkumar1000/js-test-doctor-cli/issues"
+  },
+  "bin": {
+    "js-test-doctor-cli": "./bin/js-test-doctor.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check bin/js-test-doctor.js && node --check src/cli.js && node --check src/analyzer.js && node --check src/log-analyzer.js && node --check src/formatters.js && node --check test/analyzer.test.js && node --check test/cli.test.js && node --check test/formatters.test.js"
+  },
+  "keywords": [
+    "jest",
+    "vitest",
+    "testing",
+    "diagnostics",
+    "cli",
+    "developer-tools",
+    "mocking",
+    "sarif",
+    "github-actions"
+  ],
+  "license": "MIT"
+}
