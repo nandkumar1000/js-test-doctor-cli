@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "test": "node --test",
-    "check": "node --check bin/js-test-doctor.js && node --check src/cli.js && node --check src/analyzer.js && node --check src/log-analyzer.js && node --check src/formatters.js && node --check test/analyzer.test.js && node --check test/cli.test.js && node --check test/formatters.test.js"
+    "check": "node --check bin/js-test-doctor.js && node --check action/run.js && node --check src/cli.js && node --check src/analyzer.js && node --check src/log-analyzer.js && node --check src/formatters.js && node --check test/action.test.js && node --check test/analyzer.test.js && node --check test/cli.test.js && node --check test/formatters.test.js"
   },
   "keywords": [
     "jest",

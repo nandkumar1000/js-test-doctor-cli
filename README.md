@@ -65,6 +65,22 @@ Emit GitHub Actions annotations and fail the job on high-confidence errors:
   run: npx --yes js-test-doctor-cli --format github --strict
 ```
 
+JS Test Doctor is also available as a composite GitHub Action. After the first
+tagged action release, add this step after checking out your project and making
+Node.js 22 or later available:
+
+```yaml
+- name: Diagnose test setup
+  uses: nandkumar1000/js-test-doctor-cli@v0.1.0
+  with:
+    root: .
+    strict: true
+```
+
+The action runs the checked-in CLI directly, without downloading it from npm.
+Its `strict` input defaults to `false`; set it to `true` to fail on
+high-confidence errors. Pin the action to a full commit SHA in production.
+
 For machine-readable output, use JSON or SARIF:
 
 ```sh
